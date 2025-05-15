@@ -9,7 +9,7 @@ st.set_page_config(page_title="Unificador de Bases", layout="wide")
 def normalize_column_names(df):
     df.columns = [
         unicodedata.normalize('NFKD', col).encode('ASCII', 'ignore').decode('ASCII').strip()
-        .replace(' ', '').replace('-', '').lower()
+        .replace(' ', '_').replace('-', '_').lower()
         for col in df.columns
     ]
     return df
