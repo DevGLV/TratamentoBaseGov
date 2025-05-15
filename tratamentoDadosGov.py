@@ -72,7 +72,7 @@ if uploaded_files and segmento_individual_file:
                     ).drop_duplicates()
 
                     # Baixar arquivo final
-                    output_csv = dados_completos.to_csv(index=False, encoding='latin-1')
+                    output_csv = dados_completos.to_csv(index=False, encoding='utf-8')
                     st.success("✅ Base combinada com sucesso!")
                     st.download_button(
                         label="⬇️ Baixar arquivo final (dados_completos.csv)",
